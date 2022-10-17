@@ -26,6 +26,7 @@
     },
     "devDependencies": {
         "@fansy/eslint-config": "^1.1.0",
+        "@fansy/prettier-config": "^1.0.0",
         "@types/mdx": "^2.0.2",
         "@types/node": "^18.11.0",
         "@types/react": "^18.0.14",

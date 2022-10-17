@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@ant-design/icons': ^4.7.0
   '@fansy/eslint-config': ^1.1.0
+  '@fansy/prettier-config': ^1.0.0
   '@mdx-js/mdx': ^2.1.1
   '@mdx-js/react': ^2.1.1
   '@mdx-js/rollup': ^2.1.1
@@ -43,6 +44,7 @@ dependencies:
 
 devDependencies:
   '@fansy/eslint-config': 1.1.0
+  '@fansy/prettier-config': 1.0.0
   '@types/mdx': 2.0.2
   '@types/node': 18.11.0
   '@types/react': 18.0.21
@@ -425,6 +427,12 @@ packages:
       typescript: 4.8.4
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@fansy/prettier-config/1.0.0:
+    resolution: {integrity: sha512-zevewtIYvHl9T7Ejkghng0eDbljWksqkvuEbje8ifILY+Vp4+Y77GxRk3HkQtMP0GEXq/UVDDd7f1+t/hb/qOQ==}
+    dependencies:
+      prettier: 2.7.1
     dev: true
 
   /@humanwhocodes/config-array/0.5.0:
@@ -2797,6 +2805,12 @@ packages:
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /prismjs/1.27.0:
