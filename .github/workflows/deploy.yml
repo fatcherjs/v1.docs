@@ -29,7 +29,7 @@ jobs:
 
             - run: pnpm run build
 
-            - run: cp /dist/index.html /dist/404.html
+            - run: cp dist/index.html dist/404.html
 
             - uses: JamesIves/github-pages-deploy-action@4.1.1
               with:
