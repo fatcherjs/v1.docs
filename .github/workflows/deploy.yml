@@ -35,5 +35,5 @@ jobs:
               with:
                   commit-message: 'docs: 🚀 Github Pages Deployment.'
                   branch: gh-pages
-                  folder: packages/docs/dist
+                  folder: dist
                   token: ${{ secrets.GH_TOKEN }}
