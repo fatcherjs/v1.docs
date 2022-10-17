@@ -9,7 +9,7 @@ export default async () => {
 
     return defineConfig({
         root: __dirname,
-        base: '/v1/docs/',
+        base: '/v1.docs/',
         publicDir: path.resolve(__dirname, 'public'),
         build: {
             outDir: path.resolve(__dirname, './dist'),
