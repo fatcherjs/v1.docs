@@ -11,7 +11,7 @@ But fatcher can compose different enhancements functions to adapt to different u
 
 ## Middlewares
 
--   Package: [Core](https://github.com/fatcherjs/fatcher/tree/master/packages/fatcher)
+-   Package: [Core](https://github.com/fatcherjs/fatcher)
 
 The core of fatcher is middleware composition.
 
@@ -23,7 +23,7 @@ By combining middleware, we can realize request parameter interception, response
 
 ## Cancelable Request
 
--   Package: [@fatcherjs/middleware-aborter](https://github.com/fatcherjs/fatcher/tjsree/master/packages/aborter)
+-   Package: [@fatcherjs/middleware-aborter](https://github.com/fatcherjs/middleware-aborter)
 
 In many scenarios, we need to cancel requests, such as download or upload operations.
 
@@ -48,7 +48,7 @@ aborterController.abort(); // Canceled.
 
 ## Timeout
 
--   Package: [@fatcherjs/middleware-aborter](https://github.com/fatcherjs/fatcher/tree/master/packages/aborter)
+-   Package: [@fatcherjs/middleware-aborter](https://github.com/fatcherjs/middleware-aborter)
 
 The middleware provides a timeout function.
 
@@ -58,7 +58,7 @@ So, when the timeout is configured, it is easy to accomplish the required functi
 
 ## JSON Transform
 
--   Package: [@fatcherjs/middleware-json](https://github.com/fatcherjs/fatcher/tree/master/packages/json)
+-   Package: [@fatcherjs/middleware-json](https://github.com/fatcherjs/middleware-json)
 
 Fetch returns a `Response` object when responding.
 
@@ -74,7 +74,7 @@ If it transform error, will pass this `ReadableStream` to other middleware or us
 
 ## FormData Payload
 
--   Package: [@fatcherjs/middleware-form-data](https://github.com/fatcherjs/fatcher/tree/master/packages/form-data)
+-   Package: [@fatcherjs/middleware-form-data](https://github.com/fatcherjs/middleware-form-data)
 
 When we use XMLHttpRequest to upload files, we usually use `FormData` for file transfer.
 
@@ -100,7 +100,7 @@ fatcher({
 
 ## Download Progress
 
--   Package: [@fatcherjs/middleware-progress](https://github.com/fatcherjs/fatcher/tree/master/packages/progress)
+-   Package: [@fatcherjs/middleware-progress](https://github.com/fatcherjs/middleware-progress)
 
 In the download scenario, we will most likely need to show the user the current download progress. However, FETCH does not provide such an API for us to fetch.
 
@@ -110,7 +110,7 @@ The core of this functionality is to return a `Content-Length` field in the resp
 
 ## Response Cache
 
--   Package [@fatcherjs/middleware-cache](https://github.com/fatcherjs/fatcher/tree/master/packages/cache)
+-   Package [@fatcherjs/middleware-cache](https://github.com/fatcherjs/middleware-cache)
 
 For some data that is not frequently changed, we can cache the results on the client. Within the validity period, each request that hits the cache key will cache the response data, and the next request will preferentially return the data.
 

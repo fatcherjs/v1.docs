@@ -24,7 +24,11 @@ export function Link(props: PropsWithChildren<LinkProps>) {
     const isOriginLink = href && /^(\.\.)?[/#]/.test(href);
 
     return (
-        <Wrapper target={isOriginLink ? undefined : '_blank'} rel={isOriginLink ? undefined : 'noreferrer'} href={href}>
+        <Wrapper
+            target={isOriginLink ? undefined : '_blank'}
+            rel={isOriginLink ? undefined : 'noreferrer'}
+            href={isOriginLink ? href.startsWith('/') ? import.meta.env.BASE_URL + href.slice(1) : href : href}
+        >
             {children}
         </Wrapper>
     );

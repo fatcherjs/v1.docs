@@ -9,7 +9,7 @@ order: 2
 
 ## 中间件
 
--   所属模块：[核心库](https://github.com/fatcherjs/fatcher/tree/master/packages/fatcher)
+-   所属模块：[核心库](https://github.com/fatcherjs/fatcher)
 
 fatcher 的核心功能是中间件组合，这个中间件则是类似于 koa 的中间件，实现方式也是参考了 koa。
 
@@ -19,7 +19,7 @@ fatcher 的核心功能是中间件组合，这个中间件则是类似于 koa �
 
 ## 取消请求
 
--   所属模块：[@fatcherjs/middleware-aborter](https://github.com/fatcherjs/fatcher/tjsree/master/packages/aborter)
+-   所属模块：[@fatcherjs/middleware-aborter](https://github.com/fatcherjs/middleware-aborter)
 
 在很多场景中，我们需要对请求进行取消，例如下载或者上传操作。
 
@@ -44,7 +44,7 @@ aborterController.abort(); // 取消请求
 
 ## 超时时间
 
--   所属模块：[@fatcherjs/middleware-aborter](https://github.com/fatcherjs/fatcher/tree/master/packages/aborter)
+-   所属模块：[@fatcherjs/middleware-aborter](https://github.com/fatcherjs/middleware-aborter)
 
 该中间件提供了一个超时时间的功能。
 
@@ -54,7 +54,7 @@ aborterController.abort(); // 取消请求
 
 ## 响应 JSON 转换
 
--   所属模块：[@fatcherjs/middleware-json](https://github.com/fatcherjs/fatcher/tree/master/packages/json)
+-   所属模块：[@fatcherjs/middleware-json](https://github.com/fatcherjs/middleware-json)
 
 fetch 在响应的时候会返回一个 response 对象，但是 fatcher 在过滤之后会返回一个`ResponseResult`对象，在这个对象中默认返回的是一个`ReadableStream`响应体，但大多数时候，我们需要的是返回一个 JSON 格式的响应体。
 
@@ -62,7 +62,7 @@ fetch 在响应的时候会返回一个 response 对象，但是 fatcher 在过�
 
 ## FormData 请求体
 
--   所属模块：[@fatcherjs/middleware-form-data](https://github.com/fatcherjs/fatcher/tree/master/packages/form-data)
+-   所属模块：[@fatcherjs/middleware-form-data](https://github.com/fatcherjs/middleware-form-data)
 
 我们在使用 xhr 上传文件的时候，通常会使用 FormData 来进行文件传输。
 
@@ -90,7 +90,7 @@ fatcher({
 
 ## 下载进度
 
--   所属模块：[@fatcherjs/middleware-progress](https://github.com/fatcherjs/fatcher/tree/master/packages/progress)
+-   所属模块：[@fatcherjs/middleware-progress](https://github.com/fatcherjs/middleware-progress)
 
 在下载的场景中，我们很可能需要展示给用户知道当前的下载进度。但是 fetch 没有提供这样的一个 api 给我们进行获取。
 
@@ -100,7 +100,7 @@ fatcher({
 
 ## 响应缓存
 
--   所属模块：[@fatcherjs/middleware-cache](https://github.com/fatcherjs/fatcher/tree/master/packages/cache)
+-   所属模块：[@fatcherjs/middleware-cache](https://github.com/fatcherjs/middleware-cache)
 
 在一些不高频改动的数据中，我们可以在客户端进行对结果的缓存，在有效时间内，每次命中缓存 key 的请求会把响应数据缓存起来，下一次请求的时候，优先返回该数据。
 
