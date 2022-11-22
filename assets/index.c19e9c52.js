@@ -42,7 +42,7 @@ Error generating stack: `+l.message+`
 `,s(n.p,{children:"But fatcher can compose different enhancements functions to adapt to different usage scenarios."}),`
 `,s(n.h2,{children:"Middlewares"}),`
 `,h(n.ul,{children:[`
-`,h(n.li,{children:["Package: ",s(n.a,{href:"https://github.com/fatcherjs/fatcher/tree/master/packages/fatcher",children:"Core"})]}),`
+`,h(n.li,{children:["Package: ",s(n.a,{href:"https://github.com/fatcherjs/fatcher",children:"Core"})]}),`
 `]}),`
 `,s(n.p,{children:"The core of fatcher is middleware composition."}),`
 `,h(n.p,{children:["Middleware composition implementation is consulted ",s(n.code,{children:"koa"}),"."]}),`
@@ -52,7 +52,7 @@ Error generating stack: `+l.message+`
 `]}),`
 `,s(n.h2,{children:"Cancelable Request"}),`
 `,h(n.ul,{children:[`
-`,h(n.li,{children:["Package: ",s(n.a,{href:"https://github.com/fatcherjs/fatcher/tjsree/master/packages/aborter",children:"@fatcherjs/middleware-aborter"})]}),`
+`,h(n.li,{children:["Package: ",s(n.a,{href:"https://github.com/fatcherjs/middleware-aborter",children:"@fatcherjs/middleware-aborter"})]}),`
 `]}),`
 `,s(n.p,{children:"In many scenarios, we need to cancel requests, such as download or upload operations."}),`
 `,h(n.p,{children:["Fetch does not provide an API to cancel the request, but we can cancel the fetch request by binding ",s(n.code,{children:"AbortController"}),"."]}),`
@@ -71,14 +71,14 @@ aborterController.abort(); // Canceled.
 `})}),`
 `,s(n.h2,{children:"Timeout"}),`
 `,h(n.ul,{children:[`
-`,h(n.li,{children:["Package: ",s(n.a,{href:"https://github.com/fatcherjs/fatcher/tree/master/packages/aborter",children:"@fatcherjs/middleware-aborter"})]}),`
+`,h(n.li,{children:["Package: ",s(n.a,{href:"https://github.com/fatcherjs/middleware-aborter",children:"@fatcherjs/middleware-aborter"})]}),`
 `]}),`
 `,s(n.p,{children:"The middleware provides a timeout function."}),`
 `,s(n.p,{children:"When a request has gone unanswered for some time, we can choose to cancel it and report back to the user."}),`
 `,s(n.p,{children:"So, when the timeout is configured, it is easy to accomplish the required functionality for this scenario by coordinating with the 'onAbort' event in the middleware."}),`
 `,s(n.h2,{children:"JSON Transform"}),`
 `,h(n.ul,{children:[`
-`,h(n.li,{children:["Package: ",s(n.a,{href:"https://github.com/fatcherjs/fatcher/tree/master/packages/json",children:"@fatcherjs/middleware-json"})]}),`
+`,h(n.li,{children:["Package: ",s(n.a,{href:"https://github.com/fatcherjs/middleware-json",children:"@fatcherjs/middleware-json"})]}),`
 `]}),`
 `,h(n.p,{children:["Fetch returns a ",s(n.code,{children:"Response"})," object when responding."]}),`
 `,h(n.p,{children:["But fatcher returns a ",s(n.code,{children:"ResponseResult"})," after filtering."]}),`
@@ -88,7 +88,7 @@ aborterController.abort(); // Canceled.
 `,h(n.p,{children:["If it transform error, will pass this ",s(n.code,{children:"ReadableStream"})," to other middleware or user."]}),`
 `,s(n.h2,{children:"FormData Payload"}),`
 `,h(n.ul,{children:[`
-`,h(n.li,{children:["Package: ",s(n.a,{href:"https://github.com/fatcherjs/fatcher/tree/master/packages/form-data",children:"@fatcherjs/middleware-form-data"})]}),`
+`,h(n.li,{children:["Package: ",s(n.a,{href:"https://github.com/fatcherjs/middleware-form-data",children:"@fatcherjs/middleware-form-data"})]}),`
 `]}),`
 `,h(n.p,{children:["When we use XMLHttpRequest to upload files, we usually use ",s(n.code,{children:"FormData"})," for file transfer."]}),`
 `,h(n.p,{children:["Fetch is also using ",s(n.code,{children:"FormData"})," to upload files. But XMLHttpRequest should set ",s(n.code,{children:"Content-Type"})," to ",s(n.code,{children:"multipart/form-data"})," which is in request headers."]}),`
@@ -109,21 +109,21 @@ fatcher({
 `})}),`
 `,s(n.h2,{children:"Download Progress"}),`
 `,h(n.ul,{children:[`
-`,h(n.li,{children:["Package: ",s(n.a,{href:"https://github.com/fatcherjs/fatcher/tree/master/packages/progress",children:"@fatcherjs/middleware-progress"})]}),`
+`,h(n.li,{children:["Package: ",s(n.a,{href:"https://github.com/fatcherjs/middleware-progress",children:"@fatcherjs/middleware-progress"})]}),`
 `]}),`
 `,s(n.p,{children:"In the download scenario, we will most likely need to show the user the current download progress. However, FETCH does not provide such an API for us to fetch."}),`
 `,s(n.p,{children:"This middleware provides a function to get the current download progress."}),`
 `,h(n.p,{children:["The core of this functionality is to return a ",s(n.code,{children:"Content-Length"})," field in the response header. The current download progress can be simulated by the total size and the size of the acquired quantity."]}),`
 `,s(n.h2,{children:"Response Cache"}),`
 `,h(n.ul,{children:[`
-`,h(n.li,{children:["Package ",s(n.a,{href:"https://github.com/fatcherjs/fatcher/tree/master/packages/cache",children:"@fatcherjs/middleware-cache"})]}),`
+`,h(n.li,{children:["Package ",s(n.a,{href:"https://github.com/fatcherjs/middleware-cache",children:"@fatcherjs/middleware-cache"})]}),`
 `]}),`
 `,s(n.p,{children:"For some data that is not frequently changed, we can cache the results on the client. Within the validity period, each request that hits the cache key will cache the response data, and the next request will preferentially return the data."}),`
 `,s(n.p,{children:"This improves response efficiency and is especially useful in some scenarios."})]})}function Pv(e={}){const{wrapper:n}=Object.assign({},Ce(),e.components);return n?s(n,Object.assign({},e,{children:s(dd,e)})):dd(e)}var Ov=Object.freeze(Object.defineProperty({__proto__:null,title:Mv,order:Tv,default:Pv},Symbol.toStringTag,{value:"Module"}));const Lv="\u529F\u80FD",Rv=2;function fd(e){const n=Object.assign({h1:"h1",p:"p",h2:"h2",ul:"ul",li:"li",a:"a",blockquote:"blockquote",h3:"h3",pre:"pre",code:"code",strong:"strong"},Ce(),e.components);return h(Ln,{children:[s(n.h1,{children:"\u529F\u80FD"}),`
 `,s(n.p,{children:"\u5728\u57FA\u7840\u7684\u529F\u80FD\u4E2D\uFF0C\u4F7F\u7528 fatcher \u4E0E\u4F7F\u7528\u539F\u751F\u7684 fetch \u6CA1\u6709\u4EC0\u4E48\u533A\u522B\u3002\u4F46\u662F\uFF0Cfatcher \u4F1A\u901A\u8FC7\u7EC4\u5408\u4E0D\u540C\u529F\u80FD\u6765\u589E\u5F3A fetch\uFF0C\u4ECE\u800C\u9002\u5E94\u4E0D\u540C\u7684\u4F7F\u7528\u573A\u666F\u3002"}),`
 `,s(n.h2,{children:"\u4E2D\u95F4\u4EF6"}),`
 `,h(n.ul,{children:[`
-`,h(n.li,{children:["\u6240\u5C5E\u6A21\u5757\uFF1A",s(n.a,{href:"https://github.com/fatcherjs/fatcher/tree/master/packages/fatcher",children:"\u6838\u5FC3\u5E93"})]}),`
+`,h(n.li,{children:["\u6240\u5C5E\u6A21\u5757\uFF1A",s(n.a,{href:"https://github.com/fatcherjs/fatcher",children:"\u6838\u5FC3\u5E93"})]}),`
 `]}),`
 `,s(n.p,{children:"fatcher \u7684\u6838\u5FC3\u529F\u80FD\u662F\u4E2D\u95F4\u4EF6\u7EC4\u5408\uFF0C\u8FD9\u4E2A\u4E2D\u95F4\u4EF6\u5219\u662F\u7C7B\u4F3C\u4E8E koa \u7684\u4E2D\u95F4\u4EF6\uFF0C\u5B9E\u73B0\u65B9\u5F0F\u4E5F\u662F\u53C2\u8003\u4E86 koa\u3002"}),`
 `,s(n.p,{children:"\u901A\u8FC7\u7EC4\u5408\u4E2D\u95F4\u4EF6\uFF0C\u6211\u4EEC\u53EF\u4EE5\u5728\u4E00\u4E2A\u4E2D\u95F4\u4EF6\u4E2D\u5B9E\u73B0\u8BF7\u6C42\u53C2\u6570\u62E6\u622A\uFF0C\u54CD\u5E94\u62E6\u622A\uFF0C\u6A21\u62DF\u8FD4\u56DE\u7B49\u64CD\u4F5C\u3002"}),`
@@ -132,7 +132,7 @@ fatcher({
 `]}),`
 `,s(n.h2,{children:"\u53D6\u6D88\u8BF7\u6C42"}),`
 `,h(n.ul,{children:[`
-`,h(n.li,{children:["\u6240\u5C5E\u6A21\u5757\uFF1A",s(n.a,{href:"https://github.com/fatcherjs/fatcher/tjsree/master/packages/aborter",children:"@fatcherjs/middleware-aborter"})]}),`
+`,h(n.li,{children:["\u6240\u5C5E\u6A21\u5757\uFF1A",s(n.a,{href:"https://github.com/fatcherjs/middleware-aborter",children:"@fatcherjs/middleware-aborter"})]}),`
 `]}),`
 `,s(n.p,{children:"\u5728\u5F88\u591A\u573A\u666F\u4E2D\uFF0C\u6211\u4EEC\u9700\u8981\u5BF9\u8BF7\u6C42\u8FDB\u884C\u53D6\u6D88\uFF0C\u4F8B\u5982\u4E0B\u8F7D\u6216\u8005\u4E0A\u4F20\u64CD\u4F5C\u3002"}),`
 `,s(n.p,{children:"fetch \u4F1A\u5E76\u6CA1\u6709\u63D0\u4F9B\u4E00\u4E2A\u53D6\u6D88\u8BF7\u6C42\u7684 api\uFF0C \u4F46\u662F\u6211\u4EEC\u53EF\u4EE5\u901A\u8FC7\u7ED1\u5B9A AbortController \u6765\u53D6\u6D88 fetch \u8BF7\u6C42\u3002"}),`
@@ -151,20 +151,20 @@ aborterController.abort(); // \u53D6\u6D88\u8BF7\u6C42
 `})}),`
 `,s(n.h2,{children:"\u8D85\u65F6\u65F6\u95F4"}),`
 `,h(n.ul,{children:[`
-`,h(n.li,{children:["\u6240\u5C5E\u6A21\u5757\uFF1A",s(n.a,{href:"https://github.com/fatcherjs/fatcher/tree/master/packages/aborter",children:"@fatcherjs/middleware-aborter"})]}),`
+`,h(n.li,{children:["\u6240\u5C5E\u6A21\u5757\uFF1A",s(n.a,{href:"https://github.com/fatcherjs/middleware-aborter",children:"@fatcherjs/middleware-aborter"})]}),`
 `]}),`
 `,s(n.p,{children:"\u8BE5\u4E2D\u95F4\u4EF6\u63D0\u4F9B\u4E86\u4E00\u4E2A\u8D85\u65F6\u65F6\u95F4\u7684\u529F\u80FD\u3002"}),`
 `,s(n.p,{children:"\u5F53\u4E00\u4E2A\u8BF7\u6C42\u5DF2\u7ECF\u8FC7\u4E86\u4E00\u6BB5\u65F6\u95F4\u4ECD\u7136\u6CA1\u6709\u54CD\u5E94\uFF0C\u6211\u4EEC\u53EF\u4EE5\u9009\u62E9\u5BF9\u5B83\u8FDB\u884C\u53D6\u6D88\uFF0C\u5E76\u53CD\u9988\u7ED9\u7528\u6237\u3002"}),`
 `,h(n.p,{children:["\u6240\u4EE5\uFF0C\u5F53\u914D\u7F6E\u4E86\u8D85\u65F6\u65F6\u95F4\u540E\uFF0C\u901A\u8FC7\u914D\u5408\u4E2D\u95F4\u4EF6\u4E2D\u7684",s(n.code,{children:"onAbort"}),"\u4E8B\u4EF6\uFF0C\u53EF\u4EE5\u7B80\u5355\u5730\u5B8C\u6210\u8FD9\u4E2A\u573A\u666F\u6240\u9700\u7684\u529F\u80FD\u3002"]}),`
 `,s(n.h2,{children:"\u54CD\u5E94 JSON \u8F6C\u6362"}),`
 `,h(n.ul,{children:[`
-`,h(n.li,{children:["\u6240\u5C5E\u6A21\u5757\uFF1A",s(n.a,{href:"https://github.com/fatcherjs/fatcher/tree/master/packages/json",children:"@fatcherjs/middleware-json"})]}),`
+`,h(n.li,{children:["\u6240\u5C5E\u6A21\u5757\uFF1A",s(n.a,{href:"https://github.com/fatcherjs/middleware-json",children:"@fatcherjs/middleware-json"})]}),`
 `]}),`
 `,h(n.p,{children:["fetch \u5728\u54CD\u5E94\u7684\u65F6\u5019\u4F1A\u8FD4\u56DE\u4E00\u4E2A response \u5BF9\u8C61\uFF0C\u4F46\u662F fatcher \u5728\u8FC7\u6EE4\u4E4B\u540E\u4F1A\u8FD4\u56DE\u4E00\u4E2A",s(n.code,{children:"ResponseResult"}),"\u5BF9\u8C61\uFF0C\u5728\u8FD9\u4E2A\u5BF9\u8C61\u4E2D\u9ED8\u8BA4\u8FD4\u56DE\u7684\u662F\u4E00\u4E2A",s(n.code,{children:"ReadableStream"}),"\u54CD\u5E94\u4F53\uFF0C\u4F46\u5927\u591A\u6570\u65F6\u5019\uFF0C\u6211\u4EEC\u9700\u8981\u7684\u662F\u8FD4\u56DE\u4E00\u4E2A JSON \u683C\u5F0F\u7684\u54CD\u5E94\u4F53\u3002"]}),`
 `,h(n.p,{children:["\u8FD9\u65F6\u5019\u8FD9\u4E2A\u4E2D\u95F4\u4EF6\u4F1A\u5C1D\u8BD5\u628A\u54CD\u5E94\u7ED3\u679C\u8FDB\u884C\u8F6C\u6362\uFF0C\u5982\u679C\u8F6C\u6362",s(n.strong,{children:"\u5931\u8D25"}),"\uFF0C\u5219\u8FD4\u56DE\u9ED8\u8BA4\u7684",s(n.code,{children:"ReadableStream"}),"\uFF0C\u8BA9\u540E\u7EED\u7684\u4E2D\u95F4\u4EF6\u8FDB\u884C\u64CD\u4F5C\u6216\u8005\u7528\u6237\u81EA\u884C\u8F6C\u6362\u3002"]}),`
 `,s(n.h2,{children:"FormData \u8BF7\u6C42\u4F53"}),`
 `,h(n.ul,{children:[`
-`,h(n.li,{children:["\u6240\u5C5E\u6A21\u5757\uFF1A",s(n.a,{href:"https://github.com/fatcherjs/fatcher/tree/master/packages/form-data",children:"@fatcherjs/middleware-form-data"})]}),`
+`,h(n.li,{children:["\u6240\u5C5E\u6A21\u5757\uFF1A",s(n.a,{href:"https://github.com/fatcherjs/middleware-form-data",children:"@fatcherjs/middleware-form-data"})]}),`
 `]}),`
 `,s(n.p,{children:"\u6211\u4EEC\u5728\u4F7F\u7528 xhr \u4E0A\u4F20\u6587\u4EF6\u7684\u65F6\u5019\uFF0C\u901A\u5E38\u4F1A\u4F7F\u7528 FormData \u6765\u8FDB\u884C\u6587\u4EF6\u4F20\u8F93\u3002"}),`
 `,h(n.p,{children:["fetch \u4E5F\u4E0D\u4F8B\u5916\uFF0C\u5728\u4E0A\u4F20\u6587\u4EF6\u4E2D\u4E5F\u9700\u8981\u7528\u5230 ",s(n.code,{children:"FormData"}),"\u8FD9\u4E2A\u683C\u5F0F\uFF0C\u4F46\u662F\u4E0E xhr \u4E0D\u540C\u7684\u662F\uFF0Cxhr \u9700\u8981\u6307\u5B9A\u8BF7\u6C42\u5934\u4E0A\u7684 ",s(n.code,{children:"Content-Type"})," \u4E3A ",s(n.code,{children:"multipart/form-data"}),"\u3002"]}),`
@@ -186,14 +186,14 @@ fatcher({
 `})}),`
 `,s(n.h2,{children:"\u4E0B\u8F7D\u8FDB\u5EA6"}),`
 `,h(n.ul,{children:[`
-`,h(n.li,{children:["\u6240\u5C5E\u6A21\u5757\uFF1A",s(n.a,{href:"https://github.com/fatcherjs/fatcher/tree/master/packages/progress",children:"@fatcherjs/middleware-progress"})]}),`
+`,h(n.li,{children:["\u6240\u5C5E\u6A21\u5757\uFF1A",s(n.a,{href:"https://github.com/fatcherjs/middleware-progress",children:"@fatcherjs/middleware-progress"})]}),`
 `]}),`
 `,s(n.p,{children:"\u5728\u4E0B\u8F7D\u7684\u573A\u666F\u4E2D\uFF0C\u6211\u4EEC\u5F88\u53EF\u80FD\u9700\u8981\u5C55\u793A\u7ED9\u7528\u6237\u77E5\u9053\u5F53\u524D\u7684\u4E0B\u8F7D\u8FDB\u5EA6\u3002\u4F46\u662F fetch \u6CA1\u6709\u63D0\u4F9B\u8FD9\u6837\u7684\u4E00\u4E2A api \u7ED9\u6211\u4EEC\u8FDB\u884C\u83B7\u53D6\u3002"}),`
 `,s(n.p,{children:"\u8FD9\u4E2A\u4E2D\u95F4\u4EF6\u63D0\u4F9B\u4E86\u4E00\u4E2A\u83B7\u53D6\u5F53\u524D\u4E0B\u8F7D\u8FDB\u5EA6\u7684\u529F\u80FD\u3002"}),`
 `,h(n.p,{children:["\u8FD9\u4E2A\u529F\u80FD\u7684\u6838\u5FC3\u4E3A\u5728\u54CD\u5E94\u5934\u4E2D\u8FD4\u56DE\u4E00\u4E2A",s(n.code,{children:"Content-Length"}),"\u5B57\u6BB5\u3002\u901A\u8FC7\u603B\u5927\u5C0F\u4E0E\u5DF2\u83B7\u53D6\u91CF\u7684\u5927\u5C0F\u5219\u53EF\u4EE5\u6A21\u62DF\u51FA\u5F53\u524D\u7684\u4E0B\u8F7D\u8FDB\u5EA6\u3002"]}),`
 `,s(n.h2,{children:"\u54CD\u5E94\u7F13\u5B58"}),`
 `,h(n.ul,{children:[`
-`,h(n.li,{children:["\u6240\u5C5E\u6A21\u5757\uFF1A",s(n.a,{href:"https://github.com/fatcherjs/fatcher/tree/master/packages/cache",children:"@fatcherjs/middleware-cache"})]}),`
+`,h(n.li,{children:["\u6240\u5C5E\u6A21\u5757\uFF1A",s(n.a,{href:"https://github.com/fatcherjs/middleware-cache",children:"@fatcherjs/middleware-cache"})]}),`
 `]}),`
 `,s(n.p,{children:"\u5728\u4E00\u4E9B\u4E0D\u9AD8\u9891\u6539\u52A8\u7684\u6570\u636E\u4E2D\uFF0C\u6211\u4EEC\u53EF\u4EE5\u5728\u5BA2\u6237\u7AEF\u8FDB\u884C\u5BF9\u7ED3\u679C\u7684\u7F13\u5B58\uFF0C\u5728\u6709\u6548\u65F6\u95F4\u5185\uFF0C\u6BCF\u6B21\u547D\u4E2D\u7F13\u5B58 key \u7684\u8BF7\u6C42\u4F1A\u628A\u54CD\u5E94\u6570\u636E\u7F13\u5B58\u8D77\u6765\uFF0C\u4E0B\u4E00\u6B21\u8BF7\u6C42\u7684\u65F6\u5019\uFF0C\u4F18\u5148\u8FD4\u56DE\u8BE5\u6570\u636E\u3002"}),`
 `,s(n.p,{children:"\u4F1A\u6709\u6548\u7684\u63D0\u9AD8\u54CD\u5E94\u6548\u7387\uFF0C\u5728\u4E00\u4E9B\u573A\u666F\u4E0B\u7279\u522B\u6709\u7528\u3002"})]})}function zv(e={}){const{wrapper:n}=Object.assign({},Ce(),e.components);return n?s(n,Object.assign({},e,{children:s(fd,e)})):fd(e)}var Dv=Object.freeze(Object.defineProperty({__proto__:null,title:Lv,order:Rv,default:zv},Symbol.toStringTag,{value:"Module"}));const _v="Guide",Fv=0;function pd(e){const n=Object.assign({h1:"h1",p:"p",code:"code",ul:"ul",li:"li",h2:"h2",h3:"h3",a:"a",hr:"hr"},Ce(),e.components);return h(Ln,{children:[s(n.h1,{children:"Guide"}),`
@@ -527,7 +527,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         text-decoration: none;
         border-bottom-color: rgba(255, 255, 255, 0.6);
     }
-`;function QC(e){const{children:n,href:t}=e,r=t&&/^(\.\.)?[/#]/.test(t);return s(XC,{target:r?void 0:"_blank",rel:r?void 0:"noreferrer",href:t,children:n})}/**
+`;function QC(e){const{children:n,href:t}=e,r=t&&/^(\.\.)?[/#]/.test(t);return s(XC,{target:r?void 0:"_blank",rel:r?void 0:"noreferrer",href:r&&t.startsWith("/")?"/v1.docs/"+t.slice(1):t,children:n})}/**
  * @remix-run/router v1.0.2
  *
  * Copyright (c) Remix Software Inc.
